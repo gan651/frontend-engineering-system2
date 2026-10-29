@@ -12,7 +12,7 @@
     "dev": "pnpm --filter web dev",
     "build": "pnpm --filter web build",
     "build:staging": "pnpm --filter web build:staging",
-    "build:dependencies": "pnpm --filter @frontend-engineering-system2/utils build && pnpm --filter @frontend-engineering-system2/ui build",
+    "build:dependencies": "pnpm --filter @ganrunze/utils build && pnpm --filter @frontend-engineering-system2/ui build",
     "lint": "pnpm -r --if-present run lint",
     "typecheck": "pnpm -r --if-present run typecheck",
     "format": "prettier --write .",
@@ -24,6 +24,8 @@
     "release": "changeset publish",
     "test:unit": "pnpm -r --if-present run test:unit",
     "test:unit:coverage": "pnpm -r --if-present run test:unit:coverage",
+    "test:component": "pnpm -r --if-present run test:component",
+    "test:integration": "pnpm -r --if-present run test:integration",
     "check": "pnpm build:dependencies && pnpm lint && pnpm typecheck && pnpm test:unit && pnpm test:component && pnpm test:integration && pnpm build"
   },
   "devDependencies": {

@@ -40,7 +40,7 @@ export function createUsersRetryHandler() {
 
 export function createUsersDelayedHandler() {
   return http.get(usersUrl, async () => {
-    await delay(2000)
+    await delay(500)
 
     return HttpResponse.json(mockUsers)
   })
