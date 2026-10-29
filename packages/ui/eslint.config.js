@@ -3,4 +3,4 @@ import storybook from "eslint-plugin-storybook";
 
 import reactConfig from "@frontend-engineering-system2/eslint-config/react"
 
-export default reactConfig
+export default [...reactConfig, ...storybook.configs["flat/recommended"]]

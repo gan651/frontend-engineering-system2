@@ -5,7 +5,7 @@ import eslintConfigPrettier from "eslint-config-prettier"
 import tseslint from "typescript-eslint"
 
 export default defineConfig([
-  globalIgnores(["dist", "dist-ssr"]),
+  globalIgnores(["dist", "dist-ssr", "storybook-static"]),
   js.configs.recommended,
   ...tseslint.configs.recommended,
   eslintConfigPrettier,

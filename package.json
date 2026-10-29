@@ -17,11 +17,13 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "preview": "pnpm --filter web preview",
-    "check": "pnpm lint && pnpm typecheck && pnpm build",
     "prepare": "husky",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "changeset publish"
+    "release": "changeset publish",
+    "test:unit": "pnpm -r --if-present run test:unit",
+    "test:unit:coverage": "pnpm -r --if-present run test:unit:coverage",
+    "check": "pnpm lint && pnpm typecheck && pnpm test:unit && pnpm build"
   },
   "devDependencies": {
     "@changesets/cli": "^3.0.3",
